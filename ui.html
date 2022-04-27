@@ -1,7 +1,27 @@
+
 <button id="create">Create</button>
+<p id="message"></p>
+
 
 <script>
-  document.getElementById('create').onclick = () => {
-    parent.postMessage({ pluginMessage: { type: 'create', count } }, '*');
+  document.getElementById("create").onclick = () => {
+    parent.postMessage({ pluginMessage: { type: "create" } }, "*");
+  };
+
+  const fontLoadStatusNode = document.getElementById("message")
+  console.log(fontLoadStatusNode)
+
+  // document.getElementById("message").innerText = 'шрифты загружены'
+
+  onmessage = (e) => {
+    if (e.data.pluginMessage === 'font load error') {
+      console.log("got this from the plugin code:", e.data.pluginMessage);
+
+    }
+    if (e.data.pluginMessage === 'fonts-loaded') {
+      fontLoadStatusNode.textContent = 'шрифты загружены'
+      console.log("got this from the plugin code:", e.data.pluginMessage);
+
+    }
   };
 </script>
