@@ -9,9 +9,6 @@
   };
 
   const fontLoadStatusNode = document.getElementById("message")
-  console.log(fontLoadStatusNode)
-
-  // document.getElementById("message").innerText = 'шрифты загружены'
 
   onmessage = (e) => {
     if (e.data.pluginMessage === 'font load error') {
