@@ -1,14 +1,28 @@
 <html>
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        @import "./ui.css";
+      @import './style/variables.css';
+      @import './style/ui.css';
     </style>
   </head>
-  <body>
-    <button id="create">Create</button>
+  <body
+    class="Theme Theme_color_gpnDefault Theme_control_gpnDefault Theme_size_gpnDefault Theme_space_gpnDefault Theme_shadow_gpnDefault"
+  >
+    <button
+      class="Button Button_size_s Button_view_primary Button_width_default Button_form_default"
+      id="create"
+    >
+      Create
+    </button>
     <p id="message"></p>
   </body>
   <script type="module">
-      import "./ui.js";
+    import './ui.js';
   </script>
 </html>
