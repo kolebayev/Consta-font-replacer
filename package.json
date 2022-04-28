@@ -1,0 +1,35 @@
+{
+  "name": "consta-font-replacer",
+  "version": "1.0.0",
+  "description": "replace fonts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kolebayev/Consta-font-replacer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kolebayev/Consta-font-replacer/issues"
+  },
+  "homepage": "https://github.com/kolebayev/Consta-font-replacer#readme",
+  "keywords": [
+    "figma",
+    "plugin",
+    "consta",
+    "react",
+    "inter"
+  ],
+  "author": "Ilya Kolebayev",
+  "license": "ISC",
+  "source": [
+    "src/ui.html",
+    "src/plugin.js"
+  ],
+  "scripts": {
+    "start": "parcel watch --no-source-maps --no-content-hash --no-cache && cp -R ./src/manifest.json ./dist/manifest.json",
+    "build": "rm -R ./dist && parcel build --no-source-maps --no-cache --no-content-hash && cp -R ./src/manifest.json ./dist/manifest.json"
+  },
+  "devDependencies": {
+    "@parcel/transformer-inline-string": "^2.5.0",
+    "parcel": "^2.5.0",
+    "parcel-plugin-inline-source": "^1.0.0"
+  }
+}

@@ -2,7 +2,7 @@
   "name": "Consta font replacer",
   "id": "1100808562040625391",
   "api": "1.0.0",
-  "main": "code.js",
+  "main": "plugin.js",
   "editorType": [
     "figma"
   ],

@@ -25,7 +25,11 @@ figma.ui.onmessage = (msg) => {
   if (msg.type === 'create') {
     let s2 = figma.currentPage.findAll((n) => n.type === 'TEXT');
 
-    s2.forEach((item) => {
+    console.log(`LAYERS TOTAL: ${s2.length}`)
+    figma.ui.postMessage(`layers-found:${s2.length}`);
+
+    s2.forEach((item, idx) => {
+      console.log(idx)
       if (item.type === 'TEXT') {
         
         if (typeof item.fontName === 'object') {
@@ -41,10 +45,7 @@ figma.ui.onmessage = (msg) => {
         }
 
         if (typeof item.fontName === 'symbol') {
-
-
           let segments = item.getStyledTextSegments(['fontName'])
-
 
           segments.forEach((segment) => {
             item.setRangeFontName(segment.start, segment.end, {
@@ -54,11 +55,7 @@ figma.ui.onmessage = (msg) => {
                   ? 'Semi Bold'
                   : segment.fontName.style + '',
             });
-
-
           });
-
-          console.log(item.getStyledTextSegments(['fontName']));
         }
       }
     });
