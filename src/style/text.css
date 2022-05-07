@@ -1,0 +1,11 @@
+.Text_size_s {
+  font-size: var(--size-text-s);
+}
+
+.Text_size_xs {
+  font-size: var(--size-text-xs);
+}
+
+.Text_weight_bold {
+  font-weight: var(--font-weight-text-bold);
+}

@@ -1,0 +1,53 @@
+button {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 100%;
+  height: var(--button-height);
+  padding: 0 var(--button-space);
+  background: transparent;
+  border: none;
+  border-radius: var(--control-radius);
+  font-family: var(--font-primary);
+  font-size: var(--button-font-size);
+  font-weight: var(--font-weight-text-regular);
+  line-height: var(--button-height);
+  white-space: nowrap;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  -webkit-transition: background-color 0.15s ease, border-color 0.15s ease,
+    color 0.15s ease, fill 0.15s ease, -webkit-box-shadow 0.15s ease;
+  transition: background-color 0.15s ease, border-color 0.15s ease,
+    color 0.15s ease, fill 0.15s ease, -webkit-box-shadow 0.15s ease;
+  transition: background-color 0.15s ease, border-color 0.15s ease,
+    box-shadow 0.15s ease, color 0.15s ease, fill 0.15s ease;
+  transition: background-color 0.15s ease, border-color 0.15s ease,
+    box-shadow 0.15s ease, color 0.15s ease, fill 0.15s ease,
+    -webkit-box-shadow 0.15s ease;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-appearance: none;
+}
+
+.Button_size_s {
+  --button-height: var(--control-height-s);
+  --button-font-size: var(--control-text-size-s);
+  --button-space: var(--control-space-s);
+}
+
+.Button_view_primary {
+  --color-hover: var(--color-control-typo-primary-hover);
+  color: var(--color-control-typo-primary);
+  background-color: var(--color-control-bg-primary);
+}
+
+.Button:hover {
+  color: var(--color-hover);
+}
+
+.Button_view_primary:hover {
+  background-color: var(--color-control-bg-primary-hover);
+}

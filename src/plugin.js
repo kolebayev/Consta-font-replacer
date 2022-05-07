@@ -1,4 +1,5 @@
 figma.showUI(__html__);
+figma.ui.resize(400, 600);
 
 Promise.all([
   figma.loadFontAsync({ family: 'Inter', style: 'Light' }),
@@ -12,30 +13,29 @@ Promise.all([
   figma.loadFontAsync({ family: 'Segoe UI', style: 'Bold' }),
 
   // figma.loadFontAsync({ family: 'Sego', style: 'Bold' }),
-  figma.loadFontAsync({ family: 'Sego PP', style: 'Bold' }),
-
+  // figma.loadFontAsync({ family: 'Sego PP', style: 'Bold' }),
 ])
-.then((res) => {
-  console.log('res', res)
-  figma.ui.postMessage('fonts-loaded');
-})
-.catch((err) => {
-  console.log('err', err)
-  figma.ui.postMessage('font load error');
-});
+  .then((res) => {
+    console.log('res', res);
+    figma.ui.postMessage('fonts-loaded');
+  })
+  .catch((err) => {
+    console.log('err', err);
+    figma.ui.postMessage('font load error');
+  });
 
 figma.ui.onmessage = (msg) => {
   if (msg.type === 'create') {
-    console.log(123)
+    console.log(123);
     let s2 = figma.currentPage.findAll((n) => n.type === 'TEXT');
 
-    console.log(`LAYERS TOTAL: ${s2.length}`)
+    console.log(`LAYERS TOTAL: ${s2.length}`);
     figma.ui.postMessage(`layers-found:${s2.length}`);
 
     // s2.forEach((item, idx) => {
     //   console.log(idx)
     //   if (item.type === 'TEXT') {
-        
+
     //     if (typeof item.fontName === 'object') {
     //       if (item.fontName.family === 'Segoe UI') {
     //         item.fontName = {

@@ -9,16 +9,64 @@
     <style>
       @import './style/variables.css';
       @import './style/ui.css';
+      @import './style/button.css';
+      @import './style/text.css';
     </style>
   </head>
   <body
     class="Theme Theme_color_gpnDefault Theme_control_gpnDefault Theme_size_gpnDefault Theme_space_gpnDefault Theme_shadow_gpnDefault"
   >
+    <div class="hello-wrapper">
+      <p class="Text_size_s">Привет, это команда Consta!</p>
+      <br />
+      <p class="Text_size_xs">
+        Это плагин для автоматизированной замены шрифтов в макетах Figma. Пока
+        работает только <strong>для пары</strong> по схеме:<br />
+      </p>
+      <section class="font-list Text_size_xs">
+        <header>
+          <div class="Text_weight_bold">Segoe UI</div>
+          <div class=""></div>
+          <div class="Text_weight_bold">Inter</div>
+        </header>
+        <div class="row">
+          <div class="col">Light</div>
+          <div class="col">-></div>
+          <div class="col">Light</div>
+        </div>
+        <div class="row">
+          <div class="col">Regular</div>
+          <div class="col">-></div>
+          <div class="col">Regular</div>
+        </div>
+        <div class="row">
+          <div class="col">Semibold</div>
+          <div class="col">-></div>
+          <div class="col">Semi Bold</div>
+        </div>
+        <div class="row">
+          <div class="col">Bold</div>
+          <div class="col">-></div>
+          <div class="col">Bold</div>
+        </div>
+      </section>
+    </div>
+
     <button
       class="Button Button_size_s Button_view_primary Button_width_default Button_form_default"
       id="create"
     >
       Create
+    </button>
+    <button
+      class="Button Button_size_s Button_view_primary Button_width_default Button_form_default"
+    >
+      Дизайн-система Consta
+    </button>
+    <button
+      class="Button Button_size_s Button_view_primary Button_width_default Button_form_default"
+    >
+      Скачать шрифт Inter
     </button>
     <p id="message"></p>
   </body>
