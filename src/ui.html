@@ -7,70 +7,87 @@
       rel="stylesheet"
     />
     <style>
-      @import './style/variables.css';
-      @import './style/ui.css';
-      @import './style/button.css';
-      @import './style/text.css';
+      @import "./style/variables.css";
+      @import "./style/ui.css";
+      @import "./style/button.css";
+      @import "./style/text.css";
+      @import "./style/loader.css";
     </style>
   </head>
   <body
     class="Theme Theme_color_gpnDefault Theme_control_gpnDefault Theme_size_gpnDefault Theme_space_gpnDefault Theme_shadow_gpnDefault"
   >
     <div class="hello-wrapper">
-      <p class="Text_size_s">Привет, это команда Consta!</p>
-      <br />
-      <p class="Text_size_xs">
-        Это плагин для автоматизированной замены шрифтов в макетах Figma. Пока
-        работает только <strong>для пары</strong> по схеме:<br />
-      </p>
-      <section class="font-list Text_size_xs">
-        <header>
-          <div class="Text_weight_bold">Segoe UI</div>
-          <div class=""></div>
-          <div class="Text_weight_bold">Inter</div>
-        </header>
-        <div class="row">
-          <div class="col">Light</div>
-          <div class="col">-></div>
-          <div class="col">Light</div>
-        </div>
-        <div class="row">
-          <div class="col">Regular</div>
-          <div class="col">-></div>
-          <div class="col">Regular</div>
-        </div>
-        <div class="row">
-          <div class="col">Semibold</div>
-          <div class="col">-></div>
-          <div class="col">Semi Bold</div>
-        </div>
-        <div class="row">
-          <div class="col">Bold</div>
-          <div class="col">-></div>
-          <div class="col">Bold</div>
-        </div>
-      </section>
-    </div>
+      <p class="Text_size_s h1">Привет, это команда Consta!</p>
 
-    <button
-      class="Button Button_size_s Button_view_primary Button_width_default Button_form_default"
-      id="create"
-    >
-      Create
-    </button>
-    <button
-      class="Button Button_size_s Button_view_primary Button_width_default Button_form_default"
-    >
-      Дизайн-система Consta
-    </button>
-    <button
-      class="Button Button_size_s Button_view_primary Button_width_default Button_form_default"
-    >
-      Скачать шрифт Inter
-    </button>
-    <p id="message"></p>
+      <p class="Text_size_xs paragraphs">
+        Это плагин для автоматизированной замены шрифтов в макетах Figma. Пока
+        работает только <strong>для пары</strong> <br />Segoe UI -> Inter. Чтобы
+        не грузить компьютер, замена производится постранично (pages), а не во
+        всем файле сразу.
+      </p>
+
+      <p class="Text_size_s h1">Что делать?</p>
+
+      <ol class="Text_size_xs fixlist">
+        <li>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://rsms.me/inter/"
+            >Скачать</a
+          >
+          и
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://lifehacker.ru/kak-ustanovit-shrift-v-windows-i-macos/"
+            >установить</a
+          >
+          шрифт Inter на компьютер, если его нет
+        </li>
+        <li>Перезапустить Figma и открыть плагин</li>
+        <li>
+          Зайдите на первую страницу с макетами и нажмите кнопку "Поменять
+          шрифты", выделять ничего не нужно
+        </li>
+        <li>
+          Дождитесь завершения работы на текущей странице (до 5 минут в
+          зависимости от количества макетов)
+        </li>
+        <li>Переходите к следующей странице, действйте аналогично</li>
+      </ol>
+      <p class="Text_size_xs paragraphs">
+        Во время работы плагина лучше не трогать макеты и просто подождать
+      </p>
+      <button
+        class="cta Button Button_size_m Button_view_primary Button_width_default Button_form_default Button_width_full"
+        id="create"
+      >
+        Поменять шрифты
+      </button>
+      <div class="message-box">
+        <p id="message" class="message Text_size_xs Text_weight_bold">Все нужные шрифты есть, можно запускать</p>
+        <div id="loader" class="lds-ellipsis" style="display: none">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+
+      <div class="Text_size_xs footer">
+        <span>v1.0</span>
+        <a class="promo-link" href="http://www.consta.design/">
+          Tg чат для вопросов</a
+        >
+        <a class="promo-link" href="http://www.consta.design/">
+          Дизайн-система Consta
+        </a>
+      </div>
+    </div>
   </body>
   <script type="module">
-    import './ui.js';
+    import "./ui.js";
   </script>
 </html>

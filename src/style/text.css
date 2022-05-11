@@ -9,3 +9,15 @@
 .Text_weight_bold {
   font-weight: var(--font-weight-text-bold);
 }
+
+.Text_view_success {
+  color: var(--color-typo-success);
+}
+
+.Text_view_alert {
+  color: var(--color-typo-alert);
+}
+
+.Text_weight_bold {
+  font-weight: bold;
+}

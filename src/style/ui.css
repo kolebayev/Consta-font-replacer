@@ -49,3 +49,61 @@ section > header,
   width: fit-content;
   margin-top: var(--space-xs);
 }
+
+.h1 {
+  margin: var(--space-m) 0
+}
+
+.h1:first-of-type {
+  margin-top: 0;
+}
+
+.paragraph {
+  margin-bottom: var(--space-m)
+}
+
+.fixlist {
+  padding-left: 15px;
+}
+
+li {
+  margin-bottom: var(--space-2xs)
+}
+
+.promo-link {
+  /* width: 100%; */
+  /* text-align: center; */
+  /* text-decoration: none; */
+}
+
+.footer {
+  margin-top: var(--space-m);
+  display: flex;
+  justify-content: space-around;
+}
+
+a {
+  color: var(--color-typo-link)
+}
+
+.footer > span {
+  color: var(--color-typo-secondary)
+}
+
+.cta {
+  margin: var(--space-m) 0 0 0;
+}
+
+.message {
+  line-height: 15px;
+}
+
+.message-box {
+  height: 20px;
+  position: relative;
+  margin: var(--space-xs) 0 var(--space-m) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}

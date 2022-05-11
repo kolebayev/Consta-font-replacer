@@ -38,6 +38,18 @@ button {
   --button-space: var(--control-space-s);
 }
 
+.Button_size_l {
+  --button-height: var(--control-height-l);
+--button-font-size: var(--control-text-size-l);
+--button-space: var(--control-space-l);
+}
+
+.Button_size_m {
+  --button-height: var(--control-height-m);
+  --button-font-size: var(--control-text-size-m);
+  --button-space: var(--control-space-m);
+}
+
 .Button_view_primary {
   --color-hover: var(--color-control-typo-primary-hover);
   color: var(--color-control-typo-primary);
@@ -50,4 +62,16 @@ button {
 
 .Button_view_primary:hover {
   background-color: var(--color-control-bg-primary-hover);
+}
+
+.Button_width_full {
+  width: 100%
+}
+
+.Button_disabled {
+  background-color: var(--color-control-bg-disable);
+  border-color: transparent;
+  cursor: not-allowed;
+  pointer-events: none;
+  color: var(--color-control-typo-disable);
 }
