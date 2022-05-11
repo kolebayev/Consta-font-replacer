@@ -26,6 +26,7 @@ Promise.all([
 
 figma.ui.onmessage = (msg) => {
   if (msg.type === 'create') {
+    figma.clientStorage.setAsync('cat', 'tom');
     console.log(123);
     let s2 = figma.currentPage.findAll((n) => n.type === 'TEXT');
 

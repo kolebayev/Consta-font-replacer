@@ -11,6 +11,7 @@
       @import './style/ui.css';
       @import './style/button.css';
       @import './style/text.css';
+      @import './style/checkbox.css';
     </style>
   </head>
   <body
@@ -50,6 +51,24 @@
           <div class="col">Bold</div>
         </div>
       </section>
+      <div class="checkbox-wrapper">
+        <input
+          type="checkbox"
+          class="checkbox"
+          id="dont-show-intro"
+          name="dont-show-intro"
+          value="yes"
+        />
+        <label class="Text_size_xs" for="dont-show-intro"
+          >Больше не показывать при запуске</label
+        >
+      </div>
+      <button
+        class="Button Button_size_s Button_view_primary Button_width_default Button_form_default Button_width_full"
+        id="hide-intro"
+      >
+        Все понятно
+      </button>
     </div>
 
     <button
