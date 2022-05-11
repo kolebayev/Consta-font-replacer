@@ -18,6 +18,10 @@
   color: var(--color-typo-alert);
 }
 
+.Text_view_secondary {
+  color: var(--color-typo-secondary);
+}
+
 .Text_weight_bold {
   font-weight: bold;
 }
