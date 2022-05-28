@@ -6,11 +6,15 @@ Promise.all([
   figma.loadFontAsync({ family: 'Inter', style: 'Regular' }),
   figma.loadFontAsync({ family: 'Inter', style: 'Semi Bold' }),
   figma.loadFontAsync({ family: 'Inter', style: 'Bold' }),
+  figma.loadFontAsync({ family: 'Inter', style: 'Italic' }),
+  figma.loadFontAsync({ family: 'Inter', style: 'Bold Italic' }),
 
   figma.loadFontAsync({ family: 'Segoe UI', style: 'Light' }),
   figma.loadFontAsync({ family: 'Segoe UI', style: 'Regular' }),
   figma.loadFontAsync({ family: 'Segoe UI', style: 'Semibold' }),
   figma.loadFontAsync({ family: 'Segoe UI', style: 'Bold' }),
+  figma.loadFontAsync({ family: 'Segoe UI', style: 'Italic' }),
+  figma.loadFontAsync({ family: 'Segoe UI', style: 'Bold Italic' }),
 
   // figma.loadFontAsync({ family: 'Sego', style: 'Bold' }),
   // figma.loadFontAsync({ family: 'Sego PP', style: 'Bold' }),
